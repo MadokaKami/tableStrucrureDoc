@@ -43,6 +43,10 @@ public class SelTableInfo {
                 columnInfo.setType(rs.getString(4));
                 if("PK_ID".equalsIgnoreCase(columnInfo.getEnName())){
                     columnInfo.setChineseName("主键id");
+                    columnInfo.setRemarks("主键");
+                }
+                if("MAIN_PK_ID".equalsIgnoreCase(columnInfo.getEnName())){
+                    columnInfo.setRemarks("流程主表主键");
                 }
                 if("REMARKS".equalsIgnoreCase(columnInfo.getEnName())){
                     columnInfo.setChineseName("备注");
